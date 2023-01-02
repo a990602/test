@@ -1,0 +1,32 @@
+(使用C++)
+int main(){
+    int a[12]={77,5,5,22,13,55,97,4,796,1,0,9};
+    int b[10]={0,1,2,3,4,5,6,7,8,9};
+    int c[10];
+    int x=0;
+    int temp;
+    for(int i=0;i<10;i++){
+        for(int j=0;j<12;j++){
+            temp=0;
+            if(b[i]==a[j]){
+                for(int k=0;k<10;k++){
+                  if(a[j]==c[k]){//判斷c陣列是否已有此值
+                    temp=9999;
+                    k=10;
+                  }
+                }
+                if(temp!=9999){//如c陣列無此值，則加入此值
+                    c[x]=a[j];
+                    x++;
+                }
+                else{
+                    j++;
+                }
+            }
+        }
+    }
+    for(int j=0;j<5;j++){
+      cout<<c[j]<<" ";
+    }
+    return 0;
+}
