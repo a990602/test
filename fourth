@@ -1,0 +1,25 @@
+int main(){
+    int arr1[12]={77,5,5,22,13,55,97,4,796,1,0,9};
+    int ans[12];
+    int ansi=12;
+    int maxnum;
+    int countt=0;
+    int temp=0;
+    while(countt<=12){
+        ansi--;
+        maxnum=-1;
+        for(int i=0;i<12;i++){//找出未排序序列的最大值
+            if(arr1[i]>maxnum){
+                maxnum=arr1[i];
+                temp=i;
+            }
+        }
+        arr1[temp]=-1;
+        ans[ansi]=maxnum;//將未排序序列的最大值放入已排序序列
+        countt++;
+    }
+    for(int j=0;j<12;j++){//印出排序好的序列
+      cout<<ans[j]<<" ";
+    }
+    return 0;
+}
