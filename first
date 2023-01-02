@@ -1,4 +1,3 @@
-一、
 1.繼承(使用C++):
 //汽車與機車皆繼承至交通工具
 class Transportation{
