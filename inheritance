@@ -1,0 +1,48 @@
+一、
+1.繼承(使用C++):
+//汽車與機車皆繼承至交通工具
+class Transportation{
+  public:
+    int tire;
+};
+
+class Car:public Transportation{
+  public:
+    void show(){
+        tire=4;
+        cout<<"Car has "<<tire<<" tires."<<endl;
+    }
+};
+class Motorcycle:public Transportation{
+  public:
+    void show(){
+        tire=2;
+        cout<<"Motorcycle has "<<tire<<" tires."<<endl;
+    }
+};
+int main(){
+    Car car1;
+    Motorcycle motorcycle1;
+    car1.show();
+    motorcycle1.show();
+return 0;
+}
+2.介面(使用Java):
+/*汽車與機車為不同性質的類別*/
+interface Drive{
+	public void show();
+}
+interface Ride{
+	public void show();
+}
+class Motorcycle implements Ride
+{
+	public void show(){
+		System.out.println("Ride motorcycle!");
+	}
+}
+class Car implements Drive{
+	public void show(){
+		System.out.println("Drive car!");
+	}
+}
