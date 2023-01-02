@@ -1,0 +1,50 @@
+1.
+int main(){
+    int arr1[10]={0,1,2,3,4,5,6,7,8,9};
+    int oddsum=0;
+    int evensum=0;
+    int ans=0;
+    int temp=0;
+    for(int i=0;i<10;i++){
+        temp=arr1[i]%2;
+        if(temp>0){
+            oddsum=oddsum+arr1[i];
+        }
+        else{
+            evensum=evensum+arr1[i];
+        }
+    }
+    ans=oddsum-evensum;
+    cout<<"ans= "<<ans;
+    return 0;
+}
+2.
+int main(){
+    int arr1[10]={0,1,2,3,4,5,6,7,8,9};
+    int odd[5];
+    int even[5];
+    int temp=0;
+    int x=0,y=0;
+    for(int i=0;i<10;i++){
+        temp=arr1[i]%2;
+        if(temp>0){
+            odd[x]=arr1[i];
+            x++;
+        }
+        else{
+            even[y]=arr1[i];
+            y++;
+        }
+    }
+    cout<<"even: ";
+    for(int j=0;j<5;j++){
+      cout<<even[j]<<" ";
+    }
+    cout<<endl;
+    cout<<"odd: ";
+    for(int j=0;j<5;j++){
+      cout<<odd[j]<<" ";
+    }
+    cout<<endl;
+    return 0;
+}
