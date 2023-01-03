@@ -2,10 +2,12 @@
 int main(){
     int a[12]={77,5,5,22,13,55,97,4,796,1,0,9};
     int b[10]={0,1,2,3,4,5,6,7,8,9};
-    int c[10];
+    int c[10]={-1};
+    int d[6];
+    int e[16];
     int x=0;
     int temp;
-    for(int i=0;i<10;i++){
+    for(int i=0;i<10;i++){//找出陣列c
         for(int j=0;j<12;j++){
             temp=0;
             if(b[i]==a[j]){
@@ -25,8 +27,44 @@ int main(){
             }
         }
     }
-    for(int j=0;j<5;j++){
+    x=0;
+    temp=0;
+    for(int i=0;i<12;i++){//找出陣列d
+        temp=0;
+        for(int j=0;j<5;j++){
+            if(a[i]==c[j]){
+                temp=1;
+            }
+        }
+        if(temp==0){
+            d[x]=a[i];
+            x++;
+        }
+    }
+    //找出陣列e
+    for(int i=0;i<6;i++){
+        e[i]=d[i];
+    }
+    int j=0;
+    for(int i=6;i<16;i++){
+        e[i]=b[j];
+        j++;
+    }
+
+    cout<<"陣列c:";
+    for(int j=0;j<5;j++){//列出c陣列
       cout<<c[j]<<" ";
     }
+    cout<<endl;
+    cout<<"陣列d:";
+    for(int j=0;j<6;j++){//列出d陣列
+      cout<<d[j]<<" ";
+    }
+    cout<<endl;
+    cout<<"陣列e:";
+    for(int j=0;j<16;j++){//列出e陣列
+      cout<<e[j]<<" ";
+    }
+    cout<<endl;
     return 0;
 }
