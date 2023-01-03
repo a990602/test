@@ -1,0 +1,23 @@
+<?php
+$numbers =array(2,7,11,5);
+$targetnumber=9;
+$reciveans=twoSum($numbers,$targetnumber);
+print ('[',$reciveans[0],',');
+print($reciveans[1],']');
+
+function twoSum($nums,$target){
+	$ans;
+	$ansar[2];
+	for($i=0;$i<4;$i++){
+		for($j=1;$j<4;$j++){
+			$ans=$nums[$i]+$nums[$j];
+			if($ans==$target){
+				$ansar[0]=$i;
+				$ansar[1]=$j;
+			}
+		}
+	}
+
+	return $ansar;
+}
+?>
