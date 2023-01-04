@@ -44,4 +44,5 @@ class Car implements Drive{
 	public void show(){
 		System.out.println("Drive car!");
 	}
+
 }
